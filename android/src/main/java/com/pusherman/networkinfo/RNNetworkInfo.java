@@ -21,9 +21,9 @@ public class RNNetworkInfo extends ReactContextBaseJavaModule {
 
   public RNNetworkInfo(ReactApplicationContext reactContext) {
     super(reactContext);
-
-    wifi = (WifiManager)reactContext.getApplicationContext()
-            .getSystemService(Context.WIFI_SERVICE);
+    wifi=(WifiManager)reactContext.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+    // wifi = (WifiManager)reactContext.getApplicationContext()
+    //         .getSystemService(Context.WIFI_SERVICE);
   }
 
   @Override
