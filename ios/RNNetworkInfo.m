@@ -20,50 +20,33 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(getSSID:(RCTResponseSenderBlock)callback)
 {
     NSArray *interfaceNames = CFBridgingRelease(CNCopySupportedInterfaces());
-
+    NSLog(@"%s: Supported interfaces: %@", __func__, interfaceNames);
+    
     NSDictionary *SSIDInfo;
     NSString *SSID = @"error";
-
+    
     for (NSString *interfaceName in interfaceNames) {
         SSIDInfo = CFBridgingRelease(CNCopyCurrentNetworkInfo((__bridge CFStringRef)interfaceName));
-
+        
         if (SSIDInfo.count > 0) {
             SSID = SSIDInfo[@"SSID"];
             break;
         }
     }
-
+    
     callback(@[SSID]);
-}
-
-RCT_EXPORT_METHOD(getBSSID:(RCTResponseSenderBlock)callback)
-{
-    NSArray *interfaceNames = CFBridgingRelease(CNCopySupportedInterfaces());
-    NSString *BSSID = @"error";
-
-    for (NSString* interface in interfaceNames)
-    {
-        CFDictionaryRef networkDetails = CNCopyCurrentNetworkInfo((CFStringRef) interface);
-        if (networkDetails)
-        {
-            BSSID = (NSString *)CFDictionaryGetValue (networkDetails, kCNNetworkInfoKeyBSSID);
-            CFRelease(networkDetails);
-        }
-    }
-
-    callback(@[BSSID]);
 }
 
 RCT_EXPORT_METHOD(getIPAddress:(RCTResponseSenderBlock)callback)
 {
     NSString *address = @"error";
-
+    
     struct ifaddrs *interfaces = NULL;
     struct ifaddrs *temp_addr = NULL;
     int success = 0;
-
+    
     success = getifaddrs(&interfaces);
-
+    
     if (success == 0) {
         temp_addr = interfaces;
         while(temp_addr != NULL) {
@@ -75,7 +58,7 @@ RCT_EXPORT_METHOD(getIPAddress:(RCTResponseSenderBlock)callback)
             temp_addr = temp_addr->ifa_next;
         }
     }
-
+    
     freeifaddrs(interfaces);
     callback(@[address]);
 }
