@@ -1,12 +1,66 @@
 {
-  "name": "react-native-network-info",
-  "version": "2.1.0",
-  "description": "Get local network information",
-  "main": "NetworkInfo.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:pusherman/react-native-network-info.git"
+  "_args": [
+    [
+      {
+        "name": "react-native-network-info",
+        "raw": "react-native-network-info@^0.2.0",
+        "rawSpec": "^0.2.0",
+        "scope": null,
+        "spec": ">=0.2.0 <0.3.0",
+        "type": "range"
+      },
+      "/Users/mac/Documents/SVN/RN_YNDoctor/YNHospitalDoctor"
+    ]
+  ],
+  "_cnpm_publish_time": 1448127084297,
+  "_from": "react-native-network-info@>=0.2.0 <0.3.0",
+  "_id": "react-native-network-info@0.2.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/react-native-network-info",
+  "_nodeVersion": "2.3.4",
+  "_npmUser": {
+    "email": "corey@eastcodes.com",
+    "name": "cwilson"
   },
+  "_npmVersion": "2.7.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "react-native-network-info",
+    "raw": "react-native-network-info@^0.2.0",
+    "rawSpec": "^0.2.0",
+    "scope": null,
+    "spec": ">=0.2.0 <0.3.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/react-native-network-info/download/react-native-network-info-0.2.0.tgz",
+  "_shasum": "77e8c75c62b98101574aa91c71923d0382265b67",
+  "_shrinkwrap": null,
+  "_spec": "react-native-network-info@^0.2.0",
+  "_where": "/Users/mac/Documents/SVN/RN_YNDoctor/YNHospitalDoctor",
+  "author": {
+    "email": "corey@eastcodes.com",
+    "name": "Corey Wilson",
+    "url": "https://github.com/powerfulninja"
+  },
+  "bugs": {
+    "url": "https://github.com/pusherman/react-native-network-info/issues"
+  },
+  "dependencies": {},
+  "description": "Get local network information",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "noattachment": false,
+    "shasum": "77e8c75c62b98101574aa91c71923d0382265b67",
+    "size": 6948,
+    "tarball": "http://registry.npm.taobao.org/react-native-network-info/download/react-native-network-info-0.2.0.tgz"
+  },
+  "gitHead": "4b9a1e7122595fc618d26863771f8ea08d5d867e",
+  "homepage": "https://github.com/pusherman/react-native-network-info",
   "keywords": [
     "react-component",
     "react-native",
@@ -14,9 +68,24 @@
     "network",
     "lan"
   ],
-  "peerDependencies": {
-    "react-native": "0.35.0"
+  "license": "MIT",
+  "main": "NetworkInfo.js",
+  "maintainers": [
+    {
+      "email": "corey@eastcodes.com",
+      "name": "cwilson"
+    }
+  ],
+  "name": "react-native-network-info",
+  "optionalDependencies": {},
+  "publish_time": 1448127084297,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pusherman/react-native-network-info.git"
   },
-  "author": "Corey Wilson <corey@eastcodes.com> (https://github.com/powerfulninja)",
-  "license": "MIT"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.2.0"
 }
